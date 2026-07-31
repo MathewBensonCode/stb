@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.25...4.4)
 
 project(stb C)
 
@@ -33,6 +33,6 @@ target_sources(
             stb_truetype.h
             stb_voxel_render.h)
 
-install(TARGETS stb EXPORT stb-targets FILE_SET HEADERS DESTINATION ${CMAKE_INSTALL_PREFIX}/include/stb)
+install(TARGETS stb EXPORT stb-targets FILE_SET HEADERS DESTINATION include/stb)
 
-install(EXPORT stb-targets DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/stb NAMESPACE stb:: FILE stbConfig.cmake)
+install(EXPORT stb-targets DESTINATION lib/cmake/stb NAMESPACE stb:: FILE stbConfig.cmake)
